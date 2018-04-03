@@ -39,11 +39,18 @@ function random() {
 
 function replaceChars(value) {
   return value
-    .replace(/\./g, '\\.')
     .replace(/\?/g, '\\?')
+    .replace(/:/g, '\\:')
+    .replace(/\\/g, '\\\\')
+    .replace(/\|/g, '\\|')
+    .replace(/-/g, '\\-')
+    .replace(/\}/g, '\\}')
     .replace(/\*/g, '\\*')
+    .replace(/\./g, '\\.')
     .replace(/\+/g, '\\+')
     .replace(/\^/g, '\\^')
+    .replace(/\(/g, '\\(')
+    .replace(/\)/g, '\\)')
     .replace(/\{/g, '\\{')
     .replace(/\}/g, '\\}')
     .replace(/\[/g, '\\[')
