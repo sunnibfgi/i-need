@@ -8,9 +8,11 @@ class SearchInput extends React.Component {
     let {value} = e.target;
     location.hash = value;
     dispatch(inputValue(value));
+    location.href = location.href.replace(/(#.*$)|$/, '#' + (value || ''));
   }
   componentDidMount() {
     this.input.focus();
+    location.href = location.href.replace(/(#.*$)|$/, '#' + (location.hash.substring(1) || ''));
   }
 
   render() {
