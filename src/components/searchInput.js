@@ -6,7 +6,6 @@ class SearchInput extends React.Component {
   changeHandler = (e) => {
     let {dispatch} = this.props;
     let {value} = e.target;
-    location.hash = value;
     dispatch(inputValue(value));
     location.href = location.href.replace(/(#.*$)|$/, '#' + (value || ''));
   }
