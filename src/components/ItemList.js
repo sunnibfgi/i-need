@@ -36,11 +36,10 @@ class ItemList extends React.Component {
 function random() {
   return Math.random() - 0.5;
 }
-
 function replaceChars(value) {
   return value
     .replace(/\?/g, '\\?')
-    .replace(/:/g, '\\:')
+    .replace(/\\:/g, '\\:')
     .replace(/\\/g, '\\\\')
     .replace(/\|/g, '\\|')
     .replace(/-/g, '\\-')
