@@ -12,8 +12,6 @@ class ItemList extends React.Component {
   componentDidMount() {
     let {dispatch} = this.props;
     dispatch(fetchPostsHandler());
-//     Promise.resolve(dispatch(fetchPostsHandler()))
-//     .then(() => console.log(ReactDOM.findDOMNode(this)));
     window.addEventListener('hashchange', this.hashchangeHandler.bind(this));
   }
   componentWillUnmount() {
